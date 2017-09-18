@@ -9,11 +9,7 @@ import { AppComponent } from './components/app/app.component';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
-        HomeComponent
+        AppComponent
     ],
     imports: [
         CommonModule,
@@ -21,9 +17,6 @@ import { AppComponent } from './components/app/app.component';
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
