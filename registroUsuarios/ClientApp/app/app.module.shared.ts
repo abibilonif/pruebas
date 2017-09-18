@@ -5,11 +5,17 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
+
+
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        LoginComponent,
+        RegistroComponent
     ],
     imports: [
         CommonModule,
@@ -17,6 +23,8 @@ import { AppComponent } from './components/app/app.component';
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: 'login', component: LoginComponent },
+            { path: 'registro', component: RegistroComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]
