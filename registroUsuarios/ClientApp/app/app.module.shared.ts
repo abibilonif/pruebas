@@ -22,10 +22,10 @@ import { RegistroComponent } from './components/registro/registro.component';
         HttpModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'login', pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
             { path: 'registro', component: RegistroComponent },
-            { path: '**', redirectTo: 'home' }
+            { path: '**', redirectTo: 'login' }
         ])
     ]
 })
